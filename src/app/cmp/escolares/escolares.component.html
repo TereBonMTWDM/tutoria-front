@@ -1,0 +1,57 @@
+
+      <div class="card">   
+          <div class="card-header card-header-warning">
+              <h4 class="card-title">Datos Escolares de Procedencia</h4>              
+          </div>                                    
+          <div class="card-body table-responsive text-left">
+              <form>
+                  <div class="row">
+                      <div class="col-md-4">
+                          <i class="material-icons">assessment</i>
+                          promedio:
+                          <label class="text-info"><h5><strong> {{dato.promedio}} </strong></h5></label> 
+                      </div>
+
+                      
+                      <div class="col-md-4">
+                          fecha de terminación:
+                          <label class="text-info"><h5><strong> {{dato.fecha_terminacion | date:'d/mm/y'}} </strong></h5></label> 
+                      </div>
+
+                      <div class="col-md-4">
+                          folio de certificado:
+                          <label class="text-info"><h5><strong> {{dato.folio_certificado}} </strong></h5></label> 
+                      </div>                                                
+                  </div>  
+                  
+                  <div class="row">
+                      <div class="col-md-6">
+                          <i class="material-icons">domain</i>
+                          escuela:
+                          <label class="text-info"><h5><strong> {{dato.escuela_procedencia}} </strong></h5></label> 
+                      </div>
+                      <div class="col-md-6">
+                          tipo:
+                          <label class="text-info"><h5><strong> {{dato.tipo}} </strong></h5></label> 
+                      </div>                  
+                  </div> 
+
+
+                  <div class="row">
+                      <div class="col-md-6">
+                          <i class="material-icons">place</i>
+                          domicilio:
+                          <label class="text-info"><h5><strong> {{dato.domicilio}} </strong></h5></label> 
+                      </div>
+                      <div class="col-md-6">
+                          CCT:
+                          <label class="text-info"><h5><strong> {{dato.cct}} </strong></h5></label> 
+                      </div>                  
+                  </div> 
+
+
+                  <div class="clearfix"></div>
+              </form>
+          </div>
+      </div>
+

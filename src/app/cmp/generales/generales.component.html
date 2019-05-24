@@ -1,0 +1,212 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 col-sm-3"></div>
+      <div class="col-md-6 col-sm-6">
+        <div class="card card-stats">
+            <div class="card-header card-header-warning card-header-icon">
+                <div class="card-icon">
+                    <i class="material-icons">content_copy</i>
+                </div>
+                <p class="card-category">Used Space</p>
+                <h3 class="card-title">49/50
+                    <small>GB</small>
+                </h3>
+            </div>
+            <div class="card-body">  
+                <!--<app-prueba-accordion></app-prueba-accordion>-->
+            </div>
+            <div class="card-footer">
+                <div class="stats">
+                    <i class="material-icons text-danger">warning</i>
+                    <a href="#pablo">Get More Space...</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-md-8 col-sm-8">
+          <div class="card card-stats">
+              <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                      <i class="material-icons">school</i>
+                  </div>
+                  <p class="card-category">Used Space</p>
+                  <h3 class="card-title">49/50
+                      <small>GB</small>
+                  </h3>
+              </div>
+
+              <div class="card card-chart">               
+                <div class="card-body">  
+                  <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                        <mat-tab-group dynamicHeight>
+                            <mat-tab label="Datos Generarles">
+                              <div class="example-small-box mat-elevation-z4">
+                                <div>
+                                  <mat-accordion class="example-headers-align">
+                                      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                                          <mat-expansion-panel-header>
+                                            <mat-panel-title>
+                                              Datos Personales
+                                            </mat-panel-title>
+                                            
+                                          </mat-expansion-panel-header>
+
+                                          <app-personales *ngFor="let personal of personales" [dato]="personal"></app-personales>
+                                      </mat-expansion-panel>
+
+
+                                      <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+                                          <mat-expansion-panel-header>
+                                            <mat-panel-title>
+                                              Datos Académicos
+                                            </mat-panel-title>
+                                            
+                                          </mat-expansion-panel-header>
+
+                                          <app-academicos *ngFor="let academico of academicos" [dato]="academico"></app-academicos>
+                                      </mat-expansion-panel>
+
+
+                                      <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+                                          <mat-expansion-panel-header>
+                                            <mat-panel-title>
+                                              Datos Familiares
+                                            </mat-panel-title>
+                                            
+                                          </mat-expansion-panel-header>
+
+                                          <app-familiares *ngFor="let familiar of familiares" [dato]="familiar"></app-familiares>
+                                      </mat-expansion-panel>
+
+
+
+                                      <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
+                                          <mat-expansion-panel-header>
+                                            <mat-panel-title>
+                                              Datos Escolares
+                                            </mat-panel-title>
+                                            
+                                          </mat-expansion-panel-header>
+
+                                          <app-escolares *ngFor="let escolar of escolares" [dato]="escolar"></app-escolares>
+                                      </mat-expansion-panel>
+
+
+
+
+                                      <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
+                                          <mat-expansion-panel-header>
+                                            <mat-panel-title>
+                                              Kárex de Calificaciones
+                                            </mat-panel-title>
+                                            
+                                          </mat-expansion-panel-header>
+
+                                          <app-cardex></app-cardex>
+                                      </mat-expansion-panel>
+                                  </mat-accordion>
+                                </div>
+                                
+                              </div>
+                            </mat-tab>
+
+
+
+                            <mat-tab label="Seguimiento Académico">
+                              <div class="example-large-box mat-elevation-z4">
+                                <div>
+                                  <!--falta el output-->
+                                  <app-indicadores></app-indicadores>
+
+                                </div>
+                                <div>
+                                    <app-materias-list *ngFor="let personal of personales" [dato]="personal"></app-materias-list>
+                                </div>
+                              </div>
+                            </mat-tab>
+                          </mat-tab-group>
+                    </div>
+                    </div> 
+                  
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">access_time</i> campaign sent 2 days ago
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+<!--
+              <div class="card-footer">
+                  <div class="stats">
+                    <div class="row">
+                      <mat-tab-group dynamicHeight>
+                          <mat-tab label="Short tab">
+                            <div class="example-small-box mat-elevation-z4">
+                              Small content
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Long tab">
+                            <div class="example-large-box mat-elevation-z4">
+                              Large content
+                            </div>
+                          </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                      <mat-accordion>
+                          <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Personal data
+                              </mat-panel-title>
+                              <mat-panel-description>
+                                Type your name and age
+                              </mat-panel-description>
+                            </mat-expansion-panel-header>
+                        
+                            <mat-form-field>
+                              <input matInput placeholder="First name">
+                            </mat-form-field>
+                        
+                            <mat-form-field>
+                              <input matInput placeholder="Age">
+                            </mat-form-field>
+                          </mat-expansion-panel>
+                          <mat-expansion-panel (opened)="panelOpenState = true"
+                                               (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Self aware panel
+                              </mat-panel-title>
+                              <mat-panel-description>
+                                Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                              </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <p>I'm visible because I am open</p>
+                          </mat-expansion-panel>
+                        </mat-accordion>
+                        
+                  </div>
+              </div>
+            -->
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-2"></div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+
+      <div class="card">   
+          <div class="card-header card-header-warning">
+              <h4 class="card-title">Datos Académicos</h4>              
+          </div>                                    
+          <div class="card-body table-responsive text-left">
+              <form>
+                  <div class="row">
+                        <div class="col-md-6">
+                            <i class="material-icons">library_books</i>
+                            grado y grupo:
+                            <label class="text-info"><h5><strong> {{dato.semestre}} - {{dato.grupo}} </strong></h5></label> 
+                        </div>
+                        <div class="col-md-6">
+                            turno:
+                            <label class="text-info"><h5><strong> {{dato.turno}} </strong></h5></label> 
+                        </div>                      
+                  </div>       
+                  
+                  <div class="row">
+                        <div class="col-md-6">
+                            <i class="material-icons">business</i>
+                            taller:
+                            <label class="text-info"><h5><strong> {{dato.taller}} </strong></h5></label> 
+                        </div>
+                        <div class="col-md-6">
+                            área:
+                            <label class="text-info"><h5><strong> {{dato.area}} </strong></h5></label> 
+                        </div>
+                  </div>      
+                  
+                    <div class="row">
+                        <div class="col-md-6">
+                            <i class="material-icons">list_alt</i>
+                            currícula:
+                            <label class="text-info"><h5><strong> {{dato.curricula}} </strong></h5></label> 
+                        </div>
+                        <div class="col-md-6">
+                            situación:
+                            <label class="text-info"><h5><strong> {{dato.situacion}} </strong></h5></label> 
+                        </div>
+                    </div>    
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <section class="example-section">
+                                <mat-slide-toggle
+                                    class="example-margin"
+                                    [color]="color"
+                                    [checked]="becaBool"
+                                    [disabled]="false">
+                                    beca
+                                </mat-slide-toggle>
+                                <label class="text-info"><h5><strong> {{dato.beca}} </strong></h5></label> 
+                            </section>
+                        </div>
+                        <div class="col-md-6" *ngIf="dato.beca != 'ninguno'">
+                            monto:
+                            <label class="text-info"><h5><strong> {{dato.monto_beca}} </strong></h5></label> 
+                        </div>
+                    </div>    
+
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <i class="material-icons">person_pin</i>
+                            estatus:
+                            <label class="text-info"><h5><strong> {{dato.estatus}} </strong></h5></label> 
+                        </div>
+
+                        
+                        <div class="col-md-4" *ngIf="dato.estatus == 'baja'">
+                            fecha de baja:
+                            <label class="text-info"><h5><strong> {{dato.fecha_baja | date:'d/mm/y'}} </strong></h5></label> 
+                        </div>
+
+                        <div class="col-md-4" *ngIf="dato.estatus == 'baja'">
+                            motivo:
+                            <label class="text-info"><h5><strong> {{dato.motivo_baja}} </strong></h5></label> 
+                        </div>
+                    </div>    
+
+                  
+                 
+                  <div class="clearfix"></div>
+              </form>
+          </div>
+      </div>

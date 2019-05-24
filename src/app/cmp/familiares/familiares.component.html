@@ -1,0 +1,67 @@
+
+      <div class="card">  
+          <div class="card-header card-header-warning">
+              <h4 class="card-title">Datos Familiares</h4>              
+          </div>                                     
+          <div class="card-body table-responsive text-left">
+              <form>
+                  <div class="row">
+                      <div class="col-md-8">                           
+                          <i class="material-icons">people</i>
+                          padre o tutor:
+                          <label class="text-info"><h5><strong> {{dato.padre}} </strong></h5></label> 
+                      </div> 
+  
+                      <div class="col-md-4">                        
+                          <section class="example-section">
+                              <mat-slide-toggle
+                                  class="example-margin"
+                                  [color]="color"
+                                  [checked]="dato.padre_vive"
+                                  [disabled]="false">
+                              </mat-slide-toggle>
+                              <div *ngIf="dato.padre_vive == true; else padreNo">
+                                <label class="text-info"><h5><strong> vive </strong></h5></label> 
+                              </div>
+                              <ng-template #padreNo>
+                                  <label class="text-info"><h5><strong> no vive </strong></h5></label> 
+                              </ng-template>
+                          </section>
+                      </div>                                                  
+                  </div> 
+
+
+                  <div class="row">
+                      <div class="col-md-8">                           
+                          <i class="material-icons">people</i>
+                         madre:
+                          <label class="text-info"><h5><strong> {{dato.madre}} </strong></h5></label> 
+                      </div> 
+  
+                      <div class="col-md-4">                        
+                          <section class="example-section">
+                              <mat-slide-toggle
+                                  class="example-margin"
+                                  [color]="color"
+                                  [checked]="dato.madre_vive"
+                                  [disabled]="false">                                                                
+                              </mat-slide-toggle>
+                              <div *ngIf="dato.madre_vive == true; else madreNo">
+                                <label class="text-info"><h5><strong> vive </strong></h5></label> 
+                              </div>
+                              <ng-template #madreNo>
+                                  <label class="text-info"><h5><strong> no vive </strong></h5></label> 
+                              </ng-template>
+                          </section>
+                      </div>                                                  
+                  </div> 
+                  
+                
+                  
+                      
+                  
+                  <div class="clearfix"></div>
+              </form>
+          </div>
+      </div>
+

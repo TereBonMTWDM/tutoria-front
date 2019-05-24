@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-header card-header-warning text-left">
+        <h4 class="card-title">Indicadores de Riesgo</h4>                                            
+    </div>
+    <div class="card-body table-responsive text-left">
+        <form *ngFor="let indicador of indicadores">
+            <app-indicador [indicador]="indicador"></app-indicador>              
+            <div class="clearfix"></div>
+        </form>
+    </div>
+</div>

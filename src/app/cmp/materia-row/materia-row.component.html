@@ -1,0 +1,31 @@
+<tbody><tr>
+<td>
+    {{dato.periodo}}
+</td>
+<td>
+    {{dato.materia}}
+</td>
+<td>
+    {{dato.promedio}}
+</td>
+<!--<td>                                
+    <div class="alert text-center" [ngClass]="colorEstatus">
+        <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+        <span>{{curri.estatus}}</span>
+    </div>
+</td>-->
+<!--
+<td>                                
+    <div class="alert text-center" ngClass="curri.estatus == 'Ordinario' ? 'alert-success' : 'alert-danger'">
+        <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+        <span>{{curri.estatus}}</span>
+    </div>
+</td>-->
+<td>                               
+    <div class="alert text-center" [ngClass]="colorEstatus">
+        <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+        <span>{{dato.estatus}}</span>
+    </div>
+</td>
+</tr>
+</tbody>
